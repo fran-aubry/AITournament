@@ -1,9 +1,12 @@
 extends layout
 
 block content
-	<script src="lib/codemirror.js"></script>
-	<link rel="stylesheet" href="public/codemirror.css">
-	<script src="public/python/python.js"></script>
+	script( src="codemirror.js")
+	link( rel="stylesheet" href="codemirror.css")
+	script( src="python/python.js")
+	textarea(id="editor") Hello world
+	script.
+		CodeMirror.fromTextArea(document.getElementById("editor"));
 	div.container
 		div.row
 			div.col-sm-6.col-md-4.col-md-offset-4
